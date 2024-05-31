@@ -1,8 +1,18 @@
-@extends('layouts.app');
+@extends('layouts.app')
 
 @section('title','Characters')
 
 @section('content')
+    <div class="container py-3">
+        <div class="row align-items-center">
+            <div class="col-auto">
+                <h1>Personaggi</h1>
+            </div>
+            <div class="col-auto ms-auto">
+                <a href="{{route('characters.create')}}" class="btn btn-secondary">Crea</a>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row row-cols-3">
             @foreach ($characters as $character)
@@ -18,7 +28,7 @@
                         <p><strong>DEF.</strong> : {{$character->defence}}</p>
                         <p><strong>SPEED</strong> : {{$character->speed}}</p>
                         <p><strong>HP.</strong> : {{$character->life}}</p>
-                    </div>
+                    </div>                    
                 </div>
             </div>
                 
