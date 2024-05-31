@@ -9,7 +9,9 @@
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        <h3>{{$character->name}}</h3>
+                        <h2>
+                            <a href="{{route('characters.show', $character)}}" class="link-underline link-underline-opacity-0 link-danger">{{$character->name}}</a>
+                        </h2>
                     </div>
                     <div class="card-body">
                         <p><strong>ATT.</strong> : {{$character->attack}}</p>
