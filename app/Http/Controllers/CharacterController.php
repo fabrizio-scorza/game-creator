@@ -32,6 +32,19 @@ class CharacterController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'name' => 'required|max:200|min:3',
+            'description' => 'nullable|max:2000',
+            'attack' => 'required|min:1|max:100',
+            'defence' => 'required|min:1|max:100',
+            'speed' => 'required|min:1|max:100',
+            'life' => 'required|min:1|max:999',
+        ]);
+
+        $form_data = $request->all();
+        $new_character = Character::create($form_data);
+
+        return to_route('characters.show', $new_character);
     }
 
     /**

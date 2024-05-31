@@ -14,7 +14,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="row row-cols-3">
+        <div class="row row-cols-3 row-gap-3">
             @foreach ($characters as $character)
             <div class="col">
                 <div class="card">

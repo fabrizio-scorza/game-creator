@@ -45,7 +45,7 @@
 
     
 
-    <button class="btn btn-primary">Crea</button>
+    <button class="btn btn-secondary">Crea</button>
   </form>
 </div>
 
