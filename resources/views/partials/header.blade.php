@@ -13,7 +13,7 @@
                        <a href="{{route('weapon')}}">Weapons</a>                    
                     </li>
                     <li>
-                        <a href="">Characters</a>                    
+                        <a href="{{route('characters.index')}}">Characters</a>                    
                     </li>
                 </ul>
             </div>
