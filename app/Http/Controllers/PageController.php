@@ -10,8 +10,14 @@ class PageController extends Controller
     //
     public function index()
     {
-        $items = Item::all();
 
-        return view('home', compact('items'));
+
+        return view('home');
+    }
+
+    public function weapon()
+    {
+        $items = Item::all();
+        return view('weapon', compact('items'));
     }
 }
