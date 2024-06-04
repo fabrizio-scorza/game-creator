@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Create Character')
+@section('title','Modifica personaggio')
 
 @section('content')
 
