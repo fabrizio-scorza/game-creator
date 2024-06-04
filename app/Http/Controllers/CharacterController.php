@@ -89,8 +89,11 @@ class CharacterController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Character $character)
     {
         //
+        $character->delete();
+
+        return to_route('characters.index');
     }
 }

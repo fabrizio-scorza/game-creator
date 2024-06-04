@@ -29,9 +29,17 @@
                         <p><strong>VEL.</strong> : {{$character->speed}}</p>
                         <p><strong>HP.</strong> : {{$character->life}}</p>
                     </div>
-                    <div class="card-footer">
+                    <div class="card-footer d-flex gap-2">
                         <a href="{{ route('characters.edit', $character) }}" class="btn btn-secondary">Modifica</a>  
-                        <a href="" class="btn btn-danger">Elimina</a>  
+
+                        <form action="{{ route('characters.destroy', $character) }}" method="POST">
+                        
+                            @csrf
+                            @method('DELETE')
+
+                            <button class="btn btn-danger">Elimina</button>
+                        
+                        </form> 
                     </div>                    
                 </div>
             </div>
