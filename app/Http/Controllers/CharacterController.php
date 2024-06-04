@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreCharacterRequest;
+use App\Http\Requests\UpdateCharacterRequest;
 use App\Models\Character;
 use Illuminate\Http\Request;
 
@@ -29,19 +31,19 @@ class CharacterController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreCharacterRequest $request)
     {
         //
-        $request->validate([
-            'name' => 'required|max:200|min:3',
-            'description' => 'nullable|max:2000',
-            'attack' => 'required|min:1|max:100',
-            'defence' => 'required|min:1|max:100',
-            'speed' => 'required|min:1|max:100',
-            'life' => 'required|min:1|max:999',
-        ]);
+        // $request->validate([
+        //     'name' => 'required|max:200|min:3',
+        //     'description' => 'nullable|max:2000',
+        //     'attack' => 'required|min:1|max:100',
+        //     'defence' => 'required|min:1|max:100',
+        //     'speed' => 'required|min:1|max:100',
+        //     'life' => 'required|min:1|max:999',
+        // ]);
 
-        $form_data = $request->all();
+        $form_data = $request->validated();
         $new_character = Character::create($form_data);
 
         return to_route('characters.show', $new_character);
@@ -68,19 +70,19 @@ class CharacterController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Character $character)
+    public function update(UpdateCharacterRequest $request, Character $character)
     {
         //
-        $request->validate([
-            'name' => 'required|max:200|min:3',
-            'description' => 'nullable|max:2000',
-            'attack' => 'required|min:1|max:100',
-            'defence' => 'required|min:1|max:100',
-            'speed' => 'required|min:1|max:100',
-            'life' => 'required|min:1|max:999',
-        ]);
+        // $request->validate([
+        //     'name' => 'required|max:200|min:3',
+        //     'description' => 'nullable|max:2000',
+        //     'attack' => 'required|min:1|max:100',
+        //     'defence' => 'required|min:1|max:100',
+        //     'speed' => 'required|min:1|max:100',
+        //     'life' => 'required|min:1|max:999',
+        // ]);
 
-        $form_data = $request->all();
+        $form_data = $request->validated();
         $character->update($form_data);
 
         return to_route('characters.show', $character);
