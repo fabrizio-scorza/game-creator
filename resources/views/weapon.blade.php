@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="container">
-        <h1>Weapons</h1>
+        <h1>Armi</h1>
         <div>
             <table class="table table-striped">
                 <thead>

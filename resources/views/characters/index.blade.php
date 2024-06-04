@@ -3,7 +3,7 @@
 @section('title','Characters')
 
 @section('content')
-    <div class="container py-3">
+    <div class="container pb-3">
         <div class="row align-items-center">
             <div class="col-auto">
                 <h1>Personaggi</h1>
