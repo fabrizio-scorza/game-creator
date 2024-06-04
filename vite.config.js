@@ -15,6 +15,7 @@ export default defineConfig({
     // Add resolve object and aliases
     resolve: {
         alias: {
+            '~icons': path.resolve(__dirname, 'node_modules/bootstrap-icons/font'),
             '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
             '~resources': '/resources/'
         }
