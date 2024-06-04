@@ -25,9 +25,13 @@
                     </div>
                     <div class="card-body">
                         <p><strong>ATT.</strong> : {{$character->attack}}</p>
-                        <p><strong>DEF.</strong> : {{$character->defence}}</p>
-                        <p><strong>SPEED</strong> : {{$character->speed}}</p>
+                        <p><strong>DIF.</strong> : {{$character->defence}}</p>
+                        <p><strong>VEL.</strong> : {{$character->speed}}</p>
                         <p><strong>HP.</strong> : {{$character->life}}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{{ route('characters.edit', $character) }}" class="btn btn-secondary">Modifica</a>  
+                        <a href="" class="btn btn-danger">Elimina</a>  
                     </div>                    
                 </div>
             </div>
