@@ -3,17 +3,21 @@
 namespace Database\Seeders;
 
 use App\Models\Character;
+use App\Models\Item;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Faker\Generator as Faker;
 
 class CharacterSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
-    public function run(): void
+    public function run(Faker $faker): void
     {
         //
+        $items_ids = Item::all()->pluck('id')->all();
+
         $characters = [
             [
                 'name' =>  'Gino Del Pollo',
@@ -52,6 +56,14 @@ class CharacterSeeder extends Seeder
             $new_character->life = $character['life'];
 
             $new_character->save();
-        }
-    }
+
+            $items = $faker->randomElements($items_ids, null);
+            $new_character->items()->attach($items, ['quantity' => $faker->randomDigitNot(0) ]);
+            
+            }
+            
+            }
+
+            
+            
 }
