@@ -57,13 +57,22 @@ class CharacterSeeder extends Seeder
 
             $new_character->save();
 
-            $items = $faker->randomElements($items_ids, null);
-            $new_character->items()->attach($items, ['quantity' => $faker->randomDigitNot(0) ]);
-            
-            }
-            
-            }
+            $items = $faker->randomElements($items_ids, 4);
 
+
+            $itemQuantity = [];
             
-            
+            for ($i = 0; $i < 4; $i++)
+            {
+                $itemQuantity[] = [$items[$i] => ['quantity' => rand(1, 3)]];
+                
+            };
+
+
+            $new_character->items()->attach([$itemQuantity]);
+
+            // [1,4,7]
+            // [1 => ['quantity' => 9], 4 => ['quantity' => 90], ...]
+        }
+    }
 }

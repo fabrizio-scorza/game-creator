@@ -24,10 +24,31 @@
                         </h2>
                     </div>
                     <div class="card-body">
-                        <p><strong>ATT.</strong> : {{$character->attack}}</p>
-                        <p><strong>DIF.</strong> : {{$character->defence}}</p>
-                        <p><strong>VEL.</strong> : {{$character->speed}}</p>
-                        <p><strong>HP.</strong> : {{$character->life}}</p>
+                        <div class="row row-cols-2">
+                            <div class="col">
+                                <p><strong>ATT.</strong> : {{$character->attack}}</p>
+                                <p><strong>DIF.</strong> : {{$character->defence}}</p>
+                                <p><strong>VEL.</strong> : {{$character->speed}}</p>
+                                <p><strong>HP.</strong> : {{$character->life}}</p>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex justify-content-between">
+                                    <p><strong>Armi</strong></p>
+                                    <p><strong>Quantità</strong></p>
+                                </div>
+                                <div>
+                                    <ul class="list-unstyled">
+                                        @foreach ($character->items as $item)
+                                        <li class="d-flex justify-content-between">
+                                            <span>{{ $item->name }}</span>
+                                            <span>{{ $item->pivot->quantity }}</span>
+                                        </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                     <div class="card-footer d-flex gap-2">
                         <a href="{{ route('admin.characters.edit', $character) }}" class="btn btn-secondary">Modifica</a>  
@@ -42,24 +63,24 @@
         </div>
     </div>
 
-    <div class="modal" id="modal" tabindex="-1">
+    <div class="modal" id="modal" tabindex="-1" aria-labelledby="modal-label" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title">Elimina</h5>
-              <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <p>Cliccando su "Si" eliminerai definitivamente il personaggio. E SE POI TE NE PENTI?</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal">No</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
               <form action="{{ route('admin.characters.destroy', $character) }}" method="POST">
                         
                 @csrf
                 @method('DELETE')
 
-                <button class="btn btn-danger delete">Si</button>
+                <button class="btn btn-danger">Si</button>
             
                 </form> 
             </div>
