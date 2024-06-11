@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\CharacterController;
+use App\Http\Controllers\Admin\CharacterController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -19,11 +19,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::middleware('auth')->group(function () {
-    Route::get('/', [PageController::class, 'index'])->name('home');
+Route::middleware('auth')
+->name('admin.')
+->prefix('admin')
+->group(function () {
+    // Route::get('/', [PageController::class, 'index'])->name('home');
     Route::get('/weapon', [PageController::class, 'weapon'])->name('weapon');
     Route::resource('characters', CharacterController::class);
 });
+
+Route::get('/', [PageController::class, 'index'])->name('home');
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

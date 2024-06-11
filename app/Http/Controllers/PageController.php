@@ -18,6 +18,6 @@ class PageController extends Controller
     public function weapon()
     {
         $items = Item::all();
-        return view('weapon', compact('items'));
+        return view('admin.weapon', compact('items'));
     }
 }

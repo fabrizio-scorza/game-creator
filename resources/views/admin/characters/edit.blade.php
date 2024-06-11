@@ -9,7 +9,7 @@
 </div>
 
 <div class="container">
-  <form action="{{ route('characters.update', $character) }}" method="POST">
+  <form action="{{ route('admin.characters.update', $character) }}" method="POST">
 
     @csrf 
     @method('PUT')

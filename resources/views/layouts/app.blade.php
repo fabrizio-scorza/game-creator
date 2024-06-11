@@ -38,10 +38,10 @@
                             <a class="nav-link" href="{{url('/') }}">{{ __('Home') }}</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="{{route('weapon')}}">Armi</a>                    
+                            <a class="nav-link" href="{{route('admin.weapon')}}">Armi</a>                    
                         </li>
                         <li>
-                            <a class="nav-link" href="{{route('characters.index')}}">Personaggi</a>                    
+                            <a class="nav-link" href="{{route('admin.characters.index')}}">Personaggi</a>                    
                         </li>
                     </ul>
 

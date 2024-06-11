@@ -9,7 +9,7 @@
                 <h1>Personaggi</h1>
             </div>
             <div class="col-auto ms-auto">
-                <a href="{{route('characters.create')}}" class="btn btn-secondary">Crea</a>
+                <a href="{{route('admin.characters.create')}}" class="btn btn-secondary">Crea</a>
             </div>
         </div>
     </div>
@@ -20,7 +20,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h2>
-                            <a href="{{route('characters.show', $character)}}" class="link-underline link-underline-opacity-0 link-danger">{{$character->name}}</a>
+                            <a href="{{route('admin.characters.show', $character)}}" class="link-underline link-underline-opacity-0 link-danger">{{$character->name}}</a>
                         </h2>
                     </div>
                     <div class="card-body">
@@ -30,7 +30,7 @@
                         <p><strong>HP.</strong> : {{$character->life}}</p>
                     </div>
                     <div class="card-footer d-flex gap-2">
-                        <a href="{{ route('characters.edit', $character) }}" class="btn btn-secondary">Modifica</a>  
+                        <a href="{{ route('admin.characters.edit', $character) }}" class="btn btn-secondary">Modifica</a>  
 
                         <button class="btn btn-danger delete">Elimina</button>
                         
@@ -54,7 +54,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal">No</button>
-              <form action="{{ route('characters.destroy', $character) }}" method="POST">
+              <form action="{{ route('admin.characters.destroy', $character) }}" method="POST">
                         
                 @csrf
                 @method('DELETE')

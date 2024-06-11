@@ -6,7 +6,7 @@
     <div class="container mb-3">
         <div class="d-flex align-items-center gap-2">
             <h2>{{$character->name}}</h2>
-            <a href="{{ route('characters.edit', $character) }}" class="btn btn-secondary ms-auto">Modifica</a>
+            <a href="{{ route('admin.characters.edit', $character) }}" class="btn btn-secondary ms-auto">Modifica</a>
             <button class="btn btn-danger delete">Elimina</button>
         </div>
     </div>    
@@ -30,7 +30,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal">No</button>
-              <form action="{{ route('characters.destroy', $character) }}" method="POST">
+              <form action="{{ route('admin.characters.destroy', $character) }}" method="POST">
                         
                 @csrf
                 @method('DELETE')
