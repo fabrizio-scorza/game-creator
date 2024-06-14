@@ -64,12 +64,12 @@ class CharacterSeeder extends Seeder
             
             foreach ($items as $item)
             {
-                $itemQuantity[] = [$item => ['quantity' => rand(1, 3)]];
+                $itemQuantity[$item] = ['quantity' => rand(1, 5)];
                 
             };
 
 
-            $new_character->items()->attach([$itemQuantity]);
+            $new_character->items()->attach($itemQuantity);
 
             // [1,4,7]
             // [1 => ['quantity' => 9], 4 => ['quantity' => 90], ...]
