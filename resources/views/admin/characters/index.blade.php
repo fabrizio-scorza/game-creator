@@ -18,10 +18,13 @@
             @foreach ($characters as $character)
             <div class="col">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header text-danger">
                         <h2>
                             <a href="{{route('admin.characters.show', $character)}}" class="link-underline link-underline-opacity-0 link-danger">{{$character->name}}</a>
                         </h2>
+                        <div>
+                            {{$character->type->name}}
+                        </div>
                     </div>
                     <div class="card-body">
                         <div class="row row-cols-2">

@@ -29,6 +29,8 @@ class StoreCharacterRequest extends FormRequest
             'defence' => 'required|min:1|max:100',
             'speed' => 'required|min:1|max:100',
             'life' => 'required|min:1|max:999',
+            // 'items' => 'exists:items,id',
+            'type_id' => 'exists:types,id'
         ];
     }
 }

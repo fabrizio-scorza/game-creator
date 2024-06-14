@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCharacterRequest;
 use App\Http\Requests\UpdateCharacterRequest;
 use App\Models\Character;
+use App\Models\Item;
+use App\Models\Type;
 use Illuminate\Http\Request;
 
 
@@ -26,8 +28,11 @@ class CharacterController extends Controller
      */
     public function create()
     {
-        //
-        return view('admin.characters.create');
+        $types = Type::all();
+
+        $items = Item::all();
+
+        return view('admin.characters.create', compact('items', 'types'));
     }
 
     /**
@@ -44,9 +49,29 @@ class CharacterController extends Controller
         //     'speed' => 'required|min:1|max:100',
         //     'life' => 'required|min:1|max:999',
         // ]);
+            // dd($request->items);
 
         $form_data = $request->validated();
         $new_character = Character::create($form_data);
+
+
+        /**
+         * items = [
+         *  [
+         *      id => 1,
+         *      qty => 10
+         *  ]
+         * ]
+         */
+        
+        // if($request->has('items')){
+
+        //     // $items = Item::with('characters')->where('item_id', $request->items);
+
+        //     dd($request->items);
+            
+        //     $new_character->items()->attach($request->items);
+        // }
 
         return to_route('admin.characters.show', $new_character);
     }
@@ -66,7 +91,10 @@ class CharacterController extends Controller
     public function edit(Character $character)
     {
         //
-        return view('admin.characters.edit', compact('character'));
+
+        $types = Type::all();
+
+        return view('admin.characters.edit', compact('character', 'types'));
     }
 
     /**

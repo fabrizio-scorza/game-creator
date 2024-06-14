@@ -20,6 +20,16 @@
     </div>
 
     <div class="mb-3">
+      <label for="type_id" class="form-label">Classe</label>
+      <select name="type_id" class="form-control" id="type_id">
+        <option value="">--Seleziona la classe--</option>
+        @foreach ($types as $type)
+            <option @selected($type->id == old('type_id', $character->type_id)) value="{{ $type->id }}">{{ $type->name }}</option>
+        @endforeach
+      </select>  
+    </div>
+
+    <div class="mb-3">
       <label for="description" class="form-label">Descrizione del Personaggio</label>
       <textarea class="form-control" name="description" id="description" rows="3" placeholder="Descrizione del personaggio...">{{ old('description', $character->description) }}</textarea>
     </div>

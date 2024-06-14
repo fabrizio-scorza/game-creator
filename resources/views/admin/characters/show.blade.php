@@ -24,6 +24,8 @@
           </li>
           @endforeach
       </ul>
+      <p><strong>Classe: </strong>{{$character->type->name}}</p>
+      <p>{{$character->type->description}}</p>
     </div>
 
     <div class="modal" tabindex="-1" id="modal">
