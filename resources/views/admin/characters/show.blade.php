@@ -16,6 +16,14 @@
         <strong>DEF.</strong> : {{$character->defence}}</p>
         <p><strong>SPEED</strong> : {{$character->speed}}
         <strong>HP.</strong> : {{$character->life}}</p>
+        <ul class="list-unstyled">
+          @foreach ($character->items as $item)
+          <li class="d-flex gap-2">
+              <span><strong>{{ $item->name }}: </strong></span>
+              <span>{{ $item->pivot->quantity }}</span>
+          </li>
+          @endforeach
+      </ul>
     </div>
 
     <div class="modal" tabindex="-1" id="modal">
