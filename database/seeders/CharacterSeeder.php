@@ -62,9 +62,9 @@ class CharacterSeeder extends Seeder
 
             $itemQuantity = [];
             
-            for ($i = 0; $i < 4; $i++)
+            foreach ($items as $item)
             {
-                $itemQuantity[] = [$items[$i] => ['quantity' => rand(1, 3)]];
+                $itemQuantity[] = [$item => ['quantity' => rand(1, 3)]];
                 
             };
 

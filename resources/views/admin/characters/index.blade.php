@@ -53,38 +53,40 @@
                     <div class="card-footer d-flex gap-2">
                         <a href="{{ route('admin.characters.edit', $character) }}" class="btn btn-secondary">Modifica</a>  
 
-                        <button class="btn btn-danger delete">Elimina</button>
+                        <button data-bs-toggle="modal" data-bs-target="#modal-{{$character->id}}" class="btn btn-danger delete">Elimina</button>
                         
                     </div>                    
                 </div>
             </div>
                 
+            <div class="modal" id="modal-{{$character->id}}" tabindex="-1" aria-labelledby="modal-label" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Elimina</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Cliccando su "Si" eliminerai definitivamente il personaggio. E SE POI TE NE PENTI?</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                      <form action="{{ route('admin.characters.destroy', $character) }}" method="POST">
+                                
+                        @csrf
+                        @method('DELETE')
+        
+                        <button class="btn btn-danger">Si</button>
+                    
+                        </form> 
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
             @endforeach
         </div>
     </div>
 
-    <div class="modal" id="modal" tabindex="-1" aria-labelledby="modal-label" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Elimina</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p>Cliccando su "Si" eliminerai definitivamente il personaggio. E SE POI TE NE PENTI?</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-              <form action="{{ route('admin.characters.destroy', $character) }}" method="POST">
-                        
-                @csrf
-                @method('DELETE')
-
-                <button class="btn btn-danger">Si</button>
-            
-                </form> 
-            </div>
-          </div>
-        </div>
-    </div>
+    
 @endsection
