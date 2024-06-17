@@ -20,7 +20,7 @@ class CharacterController extends Controller
     {
         //
         $characters = Character::all();
-        return view('admin.characters.index', compact('characters'));
+        return view('admin.characters.index', ['bg' => 'bg_index'], compact('characters'));
     }
 
     /**
@@ -32,7 +32,7 @@ class CharacterController extends Controller
 
         $items = Item::all();
 
-        return view('admin.characters.create', compact('items', 'types'));
+        return view('admin.characters.create',['bg' => 'bg_create'], compact('items', 'types'));
     }
 
     /**
@@ -82,7 +82,7 @@ class CharacterController extends Controller
     public function show(Character $character)
     {
         //
-        return view('admin.characters.show', compact('character'));
+        return view('admin.characters.show',['bg' => 'bg_show'], compact('character'));
     }
 
     /**
@@ -94,7 +94,7 @@ class CharacterController extends Controller
 
         $types = Type::all();
 
-        return view('admin.characters.edit', compact('character', 'types'));
+        return view('admin.characters.edit',['bg' => 'bg_edit'], compact('character', 'types'));
     }
 
     /**

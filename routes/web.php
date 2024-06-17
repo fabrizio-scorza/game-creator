@@ -33,7 +33,7 @@ Route::get('/', [PageController::class, 'index'])->name('home');
 
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('dashboard',['bg' => 'bg_login']);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {

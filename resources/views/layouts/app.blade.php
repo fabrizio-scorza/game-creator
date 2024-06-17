@@ -19,11 +19,11 @@
     @vite(['resources/js/app.js'])
 </head>
 
-<body>
-    <div id="app">
+<body class="{{ $bg }}">
+    <div id="app" >
 
 
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class=" navbar navbar-expand-md navbar-light">
             <div class="container">
                 
 
@@ -31,17 +31,22 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse d-flex align-items-center" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
+                    <ul class="navbar-nav me-auto d-flex align-items-center">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url('/') }}">{{ __('Home') }}</a>
+                            <a class="text-light nav-link" href="{{url('/') }}">
+                                <img class="logo" src="{{ asset('img/Boolean_ring_gold.png') }}" alt="Home">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class=" nav-link" href="{{url('/') }}">{{ __('Home') }}</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="{{route('admin.weapon')}}">Armi</a>                    
+                            <a class=" nav-link" href="{{route('admin.weapon')}}">Armi</a>                    
                         </li>
                         <li>
-                            <a class="nav-link" href="{{route('admin.characters.index')}}">Personaggi</a>                    
+                            <a class=" nav-link" href="{{route('admin.characters.index')}}">Personaggi</a>                    
                         </li>
                     </ul>
 
@@ -50,16 +55,16 @@
                         <!-- Authentication Links -->
                         @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="text-light nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
                         @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="text-light nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                         @endif
                         @else
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class="text-light nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
                             </a>
 

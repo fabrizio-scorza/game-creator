@@ -1,7 +1,150 @@
 @import '~bootstrap/scss/bootstrap';
 
+//FONT
+@font-face {
+    font-family: Ringbearer;
+    src: url(/public/font/RINGM___.TTF);
+    font-weight: normal;
+    
+}
 
+//BODY
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Ringbearer', sans-serif;
+}
+
+
+//BACKGROUNDS
+.bg_home{
+    background-image: url(../../public/img/Elden-Ring-Fia-Elden-Ring-Video-Game-Art-fromsoftware-BANDAI-NAMCO-Entertainment-2095477-wallhere.com.jpg); 
+}
+.bg_index{
+    background-image: url(../../public/img/wallpapersden.com_elden-ring-game-environment_1920x1080.jpg);
+}
+.bg_weapons{
+    background-image: url(../../public/img/dmitriy-masaltsev-screenshot00001-1920x1080-64075096631137a0fc7fc762155fe593-3377195508.jpg);
+}
+.bg_create{
+    background-image: url(../../public/img/1151240.jpg);
+}
+.bg_edit{
+    background-image: url(../../public/img/new-elden-ring-2022_bWdlZm6UmZqaraWkpJRoaWllrWZpaWU-3257567366.jpg);
+}
+.bg_show{
+    background-image: url(../../public/img/shadow-of-the-erdtree-elden-ring-thumb.jpg);
+}
+.bg_login{
+    background-image: url(../../public/img/wallpapersden.com_elden-ring-hd-age-of-stars_1920x1080.jpg);
+}
+
+
+//JS
 .visible{
     display: block;
 }
 
+//BUTTONS
+button{
+    padding: 0.375rem 0.75rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    border: none;
+}
+
+.orange{
+    background-color: #E79B28;
+}
+
+.brown{
+    background-color: #2D2620;
+}
+
+.blue{
+    background-color: #353B5B;
+}
+
+button.brown:hover{
+    background-color: #241F1A;
+}
+
+button.orange:hover{
+    background-color: #B17110;
+}
+
+button.blue:hover{
+    background-color: #272B43;
+}
+
+//NAV
+nav{
+    background-color: transparent;
+}
+
+.logo{
+    max-width: 80px;
+}
+
+a.nav-link{
+    color: whitesmoke;
+}
+
+a.nav-link:hover{
+    color: #E79B28;
+}
+
+//HOME
+.special{
+    font-size: 80px;
+    padding-top: 50vh;
+}
+.title{
+    font-size: 120px;
+}
+
+//COLOURS
+
+.black_bg{
+    background-color: #00000080;
+}
+
+.important_text{
+    color: #E79B28;
+}
+
+
+.orange_border{
+    border: 2px solid #E79B28;
+}
+
+//TABLE
+table {
+    border-collapse: separate;
+    border-spacing: 50px 0;
+    width: 100%;
+}
+.scroll {
+    overflow-y:scroll;
+    height:70vh;
+}
+
+td{
+    padding: 10px 0;
+}
+
+th{
+    padding: 20px 0;
+}
+
+//INPUT
+.form-control::placeholder { 
+    color: #E79B28;
+    opacity: 1; 
+}
+
+.form-control:focus {
+    background-color: #00000080;
+    color: #E79B28;   
+}
