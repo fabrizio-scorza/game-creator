@@ -10,8 +10,6 @@
                 <thead >
                     <tr class="important_text">
                         <th>Nome</th>
-                        <th>Slug</th>
-                        <th>Tipo</th>
                         <th>Categoria</th>
                         <th>Peso</th>
                         <th>Costp</th>
@@ -22,8 +20,6 @@
                     @foreach ($items as $item)
                         <tr>
                             <td>{{ $item->name }}</td>
-                            <td>{{ $item->slug }}</td>
-                            <td>{{ $item->type }}</td>
                             <td>{{ $item->category }}</td>
                             <td>{{ $item->weight }}</td>
                             <td>{{ $item->cost }}</td>

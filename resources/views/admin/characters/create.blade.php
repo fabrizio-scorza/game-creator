@@ -55,23 +55,26 @@
       <input type="number" min="1" max="999" name="life" class="black_bg  important_text form-control" id="life" placeholder="1-999" value="{{ old('life') }}">
     </div>
 
-    {{-- <div class="mb-3 form-group" id="checklist">
-      <label for="checklist">Armi</label>
-      <div class="d-flex gap-2 flex-wrap">
-
-        @foreach ($items as $item)
+    <label class="text-light mb-2" for="checklist">Armi</label>
+    <div class="card black_bg">
+      <div class="mb-3 form-group" id="checklist">
+        <div class="d-flex gap-2 flex-wrap">
   
-          <div class="form-check">
-            <input @checked( in_array($item->id, old('items',[])) ) name="items[{{$loop->index}}]['id']" class="form-check-input" type="checkbox" value="{{ $item->id }}" id="item-{{$item->id}}">
-            <label class="form-check-label" for="item-{{$item->id}}">
-              {{ $item->name }}
-            </label>
-            <input type="number" min="1" max="20" name="items[{{$loop->index}}]['qty']">
-          </div>
-            
-        @endforeach
+          @foreach ($items as $item)
+    
+            <div class="form-check">
+              <input @checked( in_array($item->id, old('items',[])) ) name="items[{{$loop->index}}]['id']" class="form-check-input" type="checkbox" value="{{ $item->id }}" id="item-{{$item->id}}">
+              <label class="form-check-label important_text pe-3" for="item-{{$item->id}}">
+                {{ $item->name }}
+              </label>
+              {{-- [{{$loop->index}}] DA INSERIRE NELL'ATTRIBUTO NAME DELLA CHECKBOX --}}
+              <input class="black_bg important_text" type="number" min="1" max="20" name="items[{{$loop->index}}]['qty']">
+            </div>
+              
+          @endforeach
+        </div>
       </div>
-    </div> --}}
+    </div>
     
 
     <button class="text-light brown">Crea</button>

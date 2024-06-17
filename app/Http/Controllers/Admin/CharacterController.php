@@ -32,6 +32,7 @@ class CharacterController extends Controller
 
         $items = Item::all();
 
+
         return view('admin.characters.create',['bg' => 'bg_create'], compact('items', 'types'));
     }
 
@@ -73,6 +74,24 @@ class CharacterController extends Controller
         //     $new_character->items()->attach($request->items);
         // }
 
+
+        // dd($request->items[0]);
+
+
+
+        // if($request->has('items')){
+
+        //     foreach($request->items[0] as $item){
+
+        //         if($item['qty']!== NULL){
+    
+        //             $new_character->items()->attach($request->items);
+        //         }
+        //     }
+           
+        // }
+
+        
         return to_route('admin.characters.show', $new_character);
     }
 
