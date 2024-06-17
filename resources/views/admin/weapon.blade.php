@@ -12,7 +12,7 @@
                         <th>Nome</th>
                         <th>Categoria</th>
                         <th>Peso</th>
-                        <th>Costp</th>
+                        <th>Costo</th>
                         <th>Danno</th>
                     </tr>
                 </thead>
