@@ -1,38 +1,38 @@
 name,slug,type,category,weight,cost,damage_dice
-Club,club,Weapons,Simple Melee Weapons,2 lb.,1 sp,1d4
-Dagger,dagger,Weapons,Simple Melee Weapons,1 lb.,2 gp,1d4
-Greatclub,greatclub,Weapons,Simple Melee Weapons,10 lb.,2 sp,1d8
-Handaxe,handaxe,Weapons,Simple Melee Weapons,2 lb.,5 gp,1d6
-Javelin,javelin,Weapons,Simple Melee Weapons,2 lb.,5 sp,1d6
-Light hammer,light-hammer,Weapons,Simple Melee Weapons,2 lb.,2 gp,1d4
-Mace,mace,Weapons,Simple Melee Weapons,4 lb.,5 gp,1d6
-Quarterstaff,quarterstaff,Weapons,Simple Melee Weapons,4 lb.,2 sp,1d6
-Sickle,sickle,Weapons,Simple Melee Weapons,2 lb.,1 gp,1d4
-Spear,spear,Weapons,Simple Melee Weapons,3 lb.,1 gp,1d6
-"Crossbow, light",crossbow-light,Weapons,Simple Ranged Weapons,5 lb.,25 gp,1d8
-Dart,dart,Weapons,Simple Ranged Weapons,1/4 lb.,5 cp,1d4
-Shortbow,shortbow,Weapons,Simple Ranged Weapons,2 lb.,25 gp,1d6
-Sling,sling,Weapons,Simple Ranged Weapons,0 lb.,1 sp,1d4
-Battleaxe,battleaxe,Weapons,Martial Melee Weapons,4 lb.,10 gp,1d8
-Flail,flail,Weapons,Martial Melee Weapons,2 lb.,10 gp,1d8
-Glaive,glaive,Weapons,Martial Melee Weapons,6 lb.,20 gp,1d10
-Greataxe,greataxe,Weapons,Martial Melee Weapons,7 lb.,30 gp,1d12
-Greatsword,greatsword,Weapons,Martial Melee Weapons,6 lb.,50 gp,2d6
-Halberd,halberd,Weapons,Martial Melee Weapons,6 lb.,20 gp,1d10
-Lance,lance,Weapons,Martial Melee Weapons,6 lb.,10 gp,1d12
-Longsword,longsword,Weapons,Martial Melee Weapons,3 lb.,15 gp,1d8
-Maul,maul,Weapons,Martial Melee Weapons,10 lb.,10 gp,2d6
-Morningstar,morningstar,Weapons,Martial Melee Weapons,4 lb.,15 gp,1d8
-Pike,pike,Weapons,Martial Melee Weapons,18 lb.,5 gp,1d10
-Rapier,rapier,Weapons,Martial Melee Weapons,2 lb.,25 gp,1d8
-Scimitar,scimitar,Weapons,Martial Melee Weapons,3 lb.,25 gp,1d6
-Shortsword,shortsword,Weapons,Martial Melee Weapons,2 lb.,10 gp,1d6
-Trident,trident,Weapons,Martial Melee Weapons,4 lb.,5 gp,1d6
-War pick,war-pick,Weapons,Martial Melee Weapons,2 lb.,5 gp,1d8
-Warhammer,warhammer,Weapons,Martial Melee Weapons,2 lb.,15 gp,1d8
-Whip,whip,Weapons,Martial Melee Weapons,3 lb.,2 gp,1d4
-Blowgun,blowgun,Weapons,Martial Ranged Weapons,1 lb.,10 gp,1
-"Crossbow, hand",crossbow-hand,Weapons,Martial Ranged Weapons,3 lb.,75 gp,1d6
-"Crossbow, heavy",crossbow-heavy,Weapons,Martial Ranged Weapons,18 lb.,50 gp,1d10
-Longbow,longbow,Weapons,Martial Ranged Weapons,2 lb.,50 gp,1d8
-Net,net,Weapons,Martial Ranged Weapons,3 lb.,1 gp,0
+Randello,club,Weapons,Mischia Semplice,1 kg,1 sp,1d4
+Pugnale,dagger,Weapons,Mischia Semplice,0.5 kg,2 gp,1d4
+Randello Pesante,greatclub,Weapons, Mischia Semplice,5 kg,2 sp,1d8
+Ascia,handaxe,Weapons,Mischia Semplice,1 kg,5 gp,1d6
+Giavellotto,javelin,Weapons,Mischia Semplice,1 kg,5 sp,1d6
+Martello Leggero,light-hammer,Weapons,Mischia Semplice,1 kg,2 gp,1d4
+Mazza,mace,Weapons,Mischia Semplice,2 kg,5 gp,1d6
+Bastone ferrato,quarterstaff,Weapons,Mischia Semplice,2 kg,2 sp,1d6
+Falce,sickle,Weapons,Mischia Semplice,1 kg,1 gp,1d4
+Lancia,spear,Weapons,Mischia Semplice,1.5 kg,1 gp,1d6
+Balestra Leggera,crossbow-light,Weapons,Tiro Semplice,2.5 kg,25 gp,1d8
+Dardo,dart,Weapons,Tiro Semplice,0.125 kg,5 cp,1d4
+Arco Corto,shortbow,Weapons,Tiro Semplice,1 kg,25 gp,1d6
+Fionda,sling,Weapons,Tiro Semplice,0.05 kg,1 sp,1d4
+Ascia da Battaglia,battleaxe,Weapons,Mischia da Guerra,2 kg,10 gp,1d8
+Flagello,flail,Weapons,Mischia da Guerra,1 kg,10 gp,1d8
+Falcione,glaive,Weapons,Mischia da Guerra,3 kg,20 gp,1d10
+Ascia Bipenne,greataxe,Weapons,Mischia da Guerra,3.5 kg,30 gp,1d12
+Spadone,greatsword,Weapons,Mischia da Guerra,3 kg,50 gp,2d6
+Alabarda,halberd,Weapons,Mischia da Guerra,3 kg,20 gp,1d10
+Lancia da Cavaliere,lance,Weapons,Mischia da Guerra,3 kg,10 gp,1d12
+Spada Lunga,longsword,Weapons,Mischia da Guerra, 1.5 kg,15 gp,1d8
+Maglio,maul,Weapons,Mischia da Guerra,5 kg,10 gp,2d6
+Mazza Chiodata,morningstar,Weapons,Mischia da Guerra,2 kg,15 gp,1d8
+Picca,pike,Weapons,Mischia da Guerra,9 kg,5 gp,1d10
+Rapier,rapier,Weapons,Mischia da Guerra,1 kg,25 gp,1d8
+Scimitarra,scimitar,Weapons,Mischia da Guerra,1.5 kg,25 gp,1d6
+Spada Corta,shortsword,Weapons,Mischia da Guerra,1 kg ,10 gp,1d6
+Tridente,trident,Weapons,Mischia da Guerra,2 kg,5 gp,1d6
+Piccone da Guerra,war-pick,Weapons,Mischia da Guerra,1 kg,5 gp,1d8
+Martello da Guerra,warhammer,Weapons,Mischia da Guerra,1 kg,15 gp,1d8
+Frusta,whip,Weapons,Mischia da Guerra,1.5 kg,2 gp,1d4
+Cerbottana,blowgun,Weapons,Tiro da Guerra,0.5 kg,10 gp,1
+Balestra a Mano,crossbow-hand,Weapons,Tiro da Guerra,1.5 kg,75 gp,1d6
+Balestra Pesante,crossbow-heavy,Weapons,Tiro da Guerra,9 kg,50 gp,1d10
+Arco Lungo,longbow,Weapons,Tiro da Guerra,1 kg,50 gp,1d8
+Rete,net,Weapons,Tiro da Guerra,1.5 kg,1 gp,0
