@@ -33,7 +33,7 @@ class CharacterController extends Controller
         $items = Item::all();
 
 
-        return view('admin.characters.create',['bg' => 'bg_create'], compact('items', 'types'));
+        return view('admin.characters.create', ['bg' => 'bg_create'], compact('items', 'types'));
     }
 
     /**
@@ -50,7 +50,7 @@ class CharacterController extends Controller
         //     'speed' => 'required|min:1|max:100',
         //     'life' => 'required|min:1|max:999',
         // ]);
-            // dd($request->items);
+        // dd($request->items);
 
         $form_data = $request->validated();
         $new_character = Character::create($form_data);
@@ -64,18 +64,11 @@ class CharacterController extends Controller
          *  ]
          * ]
          */
-        
-        // if($request->has('items')){
 
-        //     // $items = Item::with('characters')->where('item_id', $request->items);
+        if ($request->has('items')) {
 
-        //     dd($request->items);
-            
-        //     $new_character->items()->attach($request->items);
-        // }
-
-
-        // dd($request->items[0]);
+            $new_character->items()->attach($request->items);
+        }
 
 
 
@@ -84,14 +77,14 @@ class CharacterController extends Controller
         //     foreach($request->items[0] as $item){
 
         //         if($item['qty']!== NULL){
-    
+
         //             $new_character->items()->attach($request->items);
         //         }
         //     }
-           
+
         // }
 
-        
+
         return to_route('admin.characters.show', $new_character);
     }
 
@@ -101,7 +94,7 @@ class CharacterController extends Controller
     public function show(Character $character)
     {
         //
-        return view('admin.characters.show',['bg' => 'bg_show'], compact('character'));
+        return view('admin.characters.show', ['bg' => 'bg_show'], compact('character'));
     }
 
     /**
@@ -113,7 +106,7 @@ class CharacterController extends Controller
 
         $types = Type::all();
 
-        return view('admin.characters.edit',['bg' => 'bg_edit'], compact('character', 'types'));
+        return view('admin.characters.edit', ['bg' => 'bg_edit'], compact('character', 'types'));
     }
 
     /**

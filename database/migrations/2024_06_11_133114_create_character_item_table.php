@@ -21,7 +21,7 @@ return new class extends Migration
             $table->primary(['character_id', 'item_id']);
 
 
-            $table->unsignedTinyInteger('quantity');
+            $table->unsignedTinyInteger('quantity')->default(1);
         });
     }
 

@@ -59,7 +59,7 @@
                 @foreach ($character->items as $item)
                 <li class="d-flex gap-2">
                     <span>{{ $item->name }}: </span>
-                    {{-- <span>{{ $item->pivot->quantity }}</span> --}}
+                    <span>{{ $item->pivot->quantity }}</span>
                 </li>
                 @endforeach
             </ul>

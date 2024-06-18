@@ -64,15 +64,11 @@
             <div class="col">
               <div class="form-check">
                 <div>
-                  <input @checked( in_array($item->id, old('items',[])) ) name="items[{{$loop->index}}]['id']" class="form-check-input" type="checkbox" value="{{ $item->id }}" id="item-{{$item->id}}">
+                  <input @checked( in_array($item->id, old('items', [])) ) name="items[]" class="form-check-input" type="checkbox" value="{{ $item->id }}" id="item-{{$item->id}}">
                   <label class="form-check-label important_text pe-3" for="item-{{$item->id}}">
                     {{ $item->name }}
                   </label>
-                </div>
-                {{-- [{{$loop->index}}] DA INSERIRE NELL'ATTRIBUTO NAME DELLA CHECKBOX --}}
-                <div>
-                  <input class="black_bg border-0 important_text" type="number" min="1" max="20" name="items[{{$loop->index}}]['qty']">
-                </div>
+                </div>            
               </div>
             </div>
               
