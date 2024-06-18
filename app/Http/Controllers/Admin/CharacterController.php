@@ -41,16 +41,6 @@ class CharacterController extends Controller
      */
     public function store(StoreCharacterRequest $request)
     {
-        //
-        // $request->validate([
-        //     'name' => 'required|max:200|min:3',
-        //     'description' => 'nullable|max:2000',
-        //     'attack' => 'required|min:1|max:100',
-        //     'defence' => 'required|min:1|max:100',
-        //     'speed' => 'required|min:1|max:100',
-        //     'life' => 'required|min:1|max:999',
-        // ]);
-        // dd($request->items);
 
         $form_data = $request->validated();
         $new_character = Character::create($form_data);
@@ -70,21 +60,6 @@ class CharacterController extends Controller
             $new_character->items()->attach($request->items);
         }
 
-
-
-        // if($request->has('items')){
-
-        //     foreach($request->items[0] as $item){
-
-        //         if($item['qty']!== NULL){
-
-        //             $new_character->items()->attach($request->items);
-        //         }
-        //     }
-
-        // }
-
-
         return to_route('admin.characters.show', $new_character);
     }
 
@@ -103,10 +78,11 @@ class CharacterController extends Controller
     public function edit(Character $character)
     {
         //
-
+        // $character->load(['items']);
         $types = Type::all();
+        $items = Item::all();
 
-        return view('admin.characters.edit', ['bg' => 'bg_edit'], compact('character', 'types'));
+        return view('admin.characters.edit', ['bg' => 'bg_edit'], compact('character', 'types', 'items'));
     }
 
     /**
@@ -114,18 +90,17 @@ class CharacterController extends Controller
      */
     public function update(UpdateCharacterRequest $request, Character $character)
     {
-        //
-        // $request->validate([
-        //     'name' => 'required|max:200|min:3',
-        //     'description' => 'nullable|max:2000',
-        //     'attack' => 'required|min:1|max:100',
-        //     'defence' => 'required|min:1|max:100',
-        //     'speed' => 'required|min:1|max:100',
-        //     'life' => 'required|min:1|max:999',
-        // ]);
 
         $form_data = $request->validated();
         $character->update($form_data);
+
+        if ($request->has('items')) {
+
+            $character->items()->sync($request->items);
+        } else {
+            $character->items()->detach();
+        }
+
 
         return to_route('admin.characters.show', $character);
     }

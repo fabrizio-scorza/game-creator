@@ -13,21 +13,6 @@
         </div>
     </div>    
     <div class="container">
-        {{-- <p><strong>Description</strong>: {{$character->description}}</p>        
-        <p><strong>ATT.</strong> : {{$character->attack}}
-        <strong>DEF.</strong> : {{$character->defence}}</p>
-        <p><strong>SPEED</strong> : {{$character->speed}}
-        <strong>HP.</strong> : {{$character->life}}</p>
-        <ul class="list-unstyled">
-          @foreach ($character->items as $item)
-          <li class="d-flex gap-2">
-              <span><strong>{{ $item->name }}: </strong></span>
-              <span>{{ $item->pivot->quantity }}</span>
-          </li>
-          @endforeach
-      </ul>
-      <p><strong>Classe: </strong>{{$character->type->name}}</p>
-      <p>{{$character->type->description}}</p> --}}
       <div class="card text-light black_bg">
         <div class="card-body">
           <h5 class="card-title important_text">{{$character->type->name}}</h5>

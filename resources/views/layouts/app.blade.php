@@ -43,7 +43,7 @@
                             <a class=" nav-link" href="{{url('/') }}">{{ __('Home') }}</a>
                         </li>
                         <li>
-                            <a class=" nav-link" href="{{route('admin.weapon')}}">Armi</a>                    
+                            <a class=" nav-link" href="{{route('admin.weapon')}}">Armeria</a>                    
                         </li>
                         <li>
                             <a class=" nav-link" href="{{route('admin.characters.index')}}">Personaggi</a>                    

@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title','Armi')
+@section('title','Armeria')
 
 @section('content')
     <div class="container">
-        <h1 class="text-light">Armi</h1>
+        <h1 class="text-light">Armeria</h1>
         <div class="scroll">
             <table class="text-light black_bg">
                 <thead >

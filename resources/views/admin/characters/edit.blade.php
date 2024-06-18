@@ -54,6 +54,26 @@
       <input type="number" min="1" max="999" name="life" class="black_bg important_text border-0 form-control" id="life" placeholder="1-999" value="{{ old('life', $character->life) }}">
     </div>
 
+    <label class="text-light mb-2" for="checklist">Armi</label>
+    <div class="mb-3 card black_bg">
+      <div class="m-3 form-group" id="checklist">
+        <div class="row row-cols-4">
+  
+          @foreach ($items as $item)
+            <div class="col">
+              <div class="form-check">
+                <div>
+                  <input @checked( in_array($item->id, old('items', $character->items->pluck('id')->all()) ) ) name="items[]" class="form-check-input" type="checkbox" value="{{ $item->id }}" id="item-{{$item->id}}">
+                  <label class="form-check-label important_text pe-3" for="item-{{$item->id}}">
+                    {{ $item->name }}
+                  </label>
+                </div>            
+              </div>
+            </div>
+          @endforeach
+        </div>
+      </div>
+    </div>
     
 
     <button class="text-light brown">Modifica</button>
